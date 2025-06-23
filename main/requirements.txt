@@ -3,6 +3,6 @@ yfinance
 numpy
 pandas
 matplotlib
-tensorflow-cpu==2.12.0
+tensorflow-cpu==2.10.0
 scikit-learn
 requests
