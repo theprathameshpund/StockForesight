@@ -179,7 +179,8 @@ if symbol:
         x_test = x_test.reshape((x_test.shape[0], x_test.shape[1], 1))
 
         try:
-            model = load_model("lstm_stock_predictor.h5")
+            model_path = os.path.join(os.getcwd(), "lstm_stock_predictor.h5")
+            model = load_model(model_path)
             st.success("✅ Pre-trained model loaded successfully.")
 
             y_pred_scaled = model.predict(x_test)
@@ -206,7 +207,7 @@ if symbol:
             st.write(f"**MSE:** {mse:.4f} | **MAE:** {mae:.4f} | **R² Score:** {r2:.4f} | **Technical Accuracy:** {tech_accuracy:.2f}%")
 
         except Exception as e:
-            st.error("❌ Error loading `.h5` model. Make sure `lstm_stock_predictor.h5` is present in your project folder.")
+            st.error(f"❌ Could not load model: {e}")
             st.stop()
 
         # --------- Fundamental Analysis ----------
