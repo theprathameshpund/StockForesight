@@ -180,7 +180,7 @@ if symbol:
 
         try:
             model_path = os.path.join(os.getcwd(), "lstm_stock_predictor.h5")
-            model = load_model(model_path")
+            model = load_model(model_path)
             st.success("✅ Pre-trained model loaded successfully.")
 
             y_pred_scaled = model.predict(x_test)
