@@ -207,7 +207,7 @@ if symbol:
             st.write(f"**MSE:** {mse:.4f} | **MAE:** {mae:.4f} | **R² Score:** {r2:.4f} | **Technical Accuracy:** {tech_accuracy:.2f}%")
 
         except Exception as e:
-            st.error("❌ Error loading `.h5` model. Make sure `lstm_stock_predictor.h5` is present in your project folder.")
+            st.error(f"❌ Could not load model: {e}")
             st.stop()
 
         # --------- Fundamental Analysis ----------
