@@ -10,6 +10,9 @@ import requests
 from datetime import datetime, timedelta
 import os
 
+st.write("🗂 Current working directory:", os.getcwd())
+st.write("📁 Files in current directory:", os.listdir())
+
 st.set_page_config(layout="wide")
 st.title("📈 Hybrid Stock Price Predictor (LSTM + Technical + Fundamental Analysis)")
 
