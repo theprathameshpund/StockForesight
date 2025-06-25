@@ -179,7 +179,8 @@ if symbol:
         x_test = x_test.reshape((x_test.shape[0], x_test.shape[1], 1))
 
         try:
-            model = load_model("lstm_stock_predictor.h5")
+            model_path = os.path.join(os.getcwd(), "lstm_stock_predictor.h5")
+            model = load_model(model_path")
             st.success("✅ Pre-trained model loaded successfully.")
 
             y_pred_scaled = model.predict(x_test)
